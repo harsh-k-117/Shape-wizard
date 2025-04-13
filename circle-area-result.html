@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Area Result</title>
+    <style>
+        body {
+            font-family: palatino;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #c2edf7;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 30px;
+            color: #c2edf7;
+            margin-bottom: 20px;
+
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body background="circlemain.jpg">
+    <h1 style="c2edf7: ; opacity: 0; animation: fadeIn 1.5s ease-in forwards;">
+    RESULT
+
+<style>
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+    <p id="result"></p>
+    <a href="shape-calculator.html"><button>Back to Shapes</button></a>
+
+    <script>
+        // Get the radius from the URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const radius = parseFloat(params.get('radius'));
+
+        if (!isNaN(radius) && radius > 0) {
+            // Calculate the area
+            const area = Math.PI * radius * radius;
+            document.getElementById('result').textContent = `The area of the circle is: ${area.toFixed(2)} cm²`;
+        } else {
+            document.getElementById('result').textContent = `Invalid input. Please go back and enter a valid radius.`;
+        }
+    </script>
+</body>
+</html>

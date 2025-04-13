@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Shape</title>
+    <style>
+
+        body, h1, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:  palatino;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #f0ead6;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .shape {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 175px;
+            height: 175px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            border-radius: 0px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+      
+        .circle {
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            border-radius: 50%;
+        }
+
+        .rectangle {
+            background: linear-gradient(135deg, #76b852, #8dc26f);
+            
+        }
+
+        .square {
+            background: linear-gradient(135deg, #f7971e, #d10000);
+        }
+
+        .triangle {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .pentagon {
+            background: linear-gradient(135deg, #7f00ff, #e100ff);
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        }
+
+        .hexagon {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+       
+        .shape:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body background="indeximage2.jpg">
+    <h1 style="f0ead6: ; opacity: 0; animation: fadeIn 1s ease-in forwards;">
+    Select a Shape
+
+<style>
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+ </h1>
+
+    <div class="container">
+        <a href="circle.html" class="shape circle">Circle</a>
+        <a href="rectangle.html" class="shape rectangle">Rectangle</a>
+        <a href="square.html" class="shape square">Square</a>
+        <a href="triangle.html" class="shape triangle">Triangle</a>
+        <a href="pentagon.html" class="shape pentagon">Pentagon</a>
+        <a href="hexagon.html" class="shape hexagon">Hexagon</a>
+    </div>
+</body>
+</html>
