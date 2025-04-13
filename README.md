@@ -1,5 +1,3 @@
-# Shape-wizard
-
 <h1>Shape Wizard</h1>
 
 <p><strong>Shape Wizard</strong> is a basic website to calculate the area of 2D shapes and the volume of 3D shapes using simple HTML, CSS, and JavaScript.</p>
